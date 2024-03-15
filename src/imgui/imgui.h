@@ -2417,6 +2417,7 @@ struct ImGuiListClipper
 #endif
 };
 
+#define IMGUI_DEFINE_MATH_OPERATORS
 // Helpers: ImVec2/ImVec4 operators
 // - It is important that we are keeping those disabled by default so they don't leak in user space.
 // - This is in order to allow user enabling implicit cast operators between ImVec2/ImVec4 and their own types (using IM_VEC2_CLASS_EXTRA in imconfig.h)

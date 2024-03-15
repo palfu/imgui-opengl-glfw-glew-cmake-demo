@@ -11,11 +11,20 @@ set(APP_VERSION_MINOR 0)
 
 set(APP_TARGET app)
 
-include_directories(imgui zmo)
+message("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/imgui
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/implot
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/zmo)
 
 file(GLOB_RECURSE IMGUI_SRCS
-    imgui/*.cpp
-    zmo/*.cpp
+    src/imgui/*.cpp
+    src/implot/*.cpp
+    src/imnodes/*.cpp
+    src/imGuiFileDialog/*.cpp
+    src/zmo/*.cpp
+    src/dearPyGui/*.cpp
 )
 
 find_package(glfw3 REQUIRED)
