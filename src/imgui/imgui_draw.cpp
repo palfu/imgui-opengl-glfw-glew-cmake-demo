@@ -2234,6 +2234,7 @@ ImFont* ImFontAtlas::AddFontFromFileTTF(const char* filename, float size_pixels,
     void* data = ImFileLoadToMemory(filename, "rb", &data_size, 0);
     if (!data)
     {
+        printf("cannt load file %s\n", filename);
         IM_ASSERT_USER_ERROR(0, "Could not load font file!");
         return NULL;
     }

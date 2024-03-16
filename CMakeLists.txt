@@ -14,8 +14,11 @@ set(APP_TARGET app)
 message("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 
 include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/imgui
     ${CMAKE_CURRENT_SOURCE_DIR}/src/implot
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/stb
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/imgui-node-editor
     ${CMAKE_CURRENT_SOURCE_DIR}/src/zmo)
 
 file(GLOB_RECURSE IMGUI_SRCS
@@ -26,7 +29,7 @@ file(GLOB_RECURSE IMGUI_SRCS
     src/zmo/*.cpp
     src/imCoolBar/*.cpp
     src/imspinner/*.cpp
-    src/node_editor/*.cpp
+    src/imgui-node-editor/*.cpp
 )
 
 find_package(glfw3 REQUIRED)
@@ -47,3 +50,5 @@ target_link_libraries(${APP_TARGET} imgui)
 
 add_executable(zmo zmo_main.cpp)
 target_link_libraries(zmo imgui)
+
+add_subdirectory(example)
