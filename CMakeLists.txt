@@ -24,7 +24,9 @@ file(GLOB_RECURSE IMGUI_SRCS
     src/imnodes/*.cpp
     src/imGuiFileDialog/*.cpp
     src/zmo/*.cpp
-    src/dearPyGui/*.cpp
+    src/imCoolBar/*.cpp
+    src/imspinner/*.cpp
+    src/node_editor/*.cpp
 )
 
 find_package(glfw3 REQUIRED)
